@@ -36,7 +36,7 @@ exports.signUp = async (req, res) => {
     if (alreadyUser) {
       return res.status(400).json({
         success: false,
-        errors: "User already exists",
+        error: "User already exists",
       });
     }
 
