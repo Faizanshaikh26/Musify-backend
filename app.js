@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 require('./db/connection');
 const userControllers = require('./Controllers/User');
+const cors=require("cors")
 
 app.use(express.json());
-
+app.use(cors());
 app.get('/', (req, res) => {
   res.send("Hey there");
 });
